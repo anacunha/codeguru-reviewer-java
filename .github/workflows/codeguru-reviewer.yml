@@ -1,12 +1,19 @@
 name: CodeGuru Reviewer GitHub Actions Integration
+
 on: [pull_request, push]
+
 jobs:
   CodeGuru-Reviewer-Actions:
     runs-on: ubuntu-latest
-    # These permissions are needed to interact with GitHub's OIDC Token endpoint.
+
     permissions:
+      # Required to interact with GitHub's OIDC Token endpoint.
       id-token: write
+      # Required for workflows in private repositories.
       contents: read
+      # Required for CodeQL action (upload SARIF files).
+      security-events: write
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
