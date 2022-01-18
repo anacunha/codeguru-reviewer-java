@@ -10,8 +10,8 @@ jobs:
       # Required to interact with GitHub's OIDC Token endpoint.
       id-token: write
       # Required for workflows in private repositories.
-      actions: read
-      contents: read
+      # actions: read
+      # contents: read
       # Required for CodeQL action (upload SARIF files).
       security-events: write
 
