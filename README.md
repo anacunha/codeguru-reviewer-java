@@ -1,4 +1,4 @@
-# java-project-aws
+# CodeGuru Reviewer - Java Sample Project
 
 Use the following command to create a new directory called `myapp` with a project configuration file :
 
