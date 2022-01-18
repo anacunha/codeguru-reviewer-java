@@ -1,6 +1,6 @@
 name: CodeGuru Reviewer GitHub Actions Integration
 
-on: [pull_request, push]
+on: [push]
 
 jobs:
   CodeGuru-Reviewer-Actions:
@@ -10,6 +10,7 @@ jobs:
       # Required to interact with GitHub's OIDC Token endpoint.
       id-token: write
       # Required for workflows in private repositories.
+      actions: read
       contents: read
       # Required for CodeQL action (upload SARIF files).
       security-events: write
