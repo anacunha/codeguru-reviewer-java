@@ -11,7 +11,8 @@ jobs:
       id-token: write
       # Required for workflows in private repositories.
       # actions: read
-      # contents: read
+      # Required for Checkout action
+      contents: read
       # Required for CodeQL action (upload SARIF files).
       security-events: write
 
