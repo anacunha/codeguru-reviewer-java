@@ -34,6 +34,8 @@ jobs:
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME_ARN }}
           aws-region: ${{ secrets.AWS_REGION }}
+      - name: Test AWS
+        run: aws s3 ls
       - name: Amazon CodeGuru Reviewer
         uses: aws-actions/codeguru-reviewer@v1.1
         with:
